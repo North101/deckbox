@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "deckbox"
+version = "0.1.0"
+description = ""
+authors = ["North101"]
+license = "MIT"
+
+[tool.poetry.scripts]
+build = "deckbox:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pysvg = {git = "https://github.com/North101/pysvg.git"}
+pysvg-util = {git = "https://github.com/North101/pysvg-util.git"}
+typed-argparse = {git = "https://github.com/North101/typed-argparse"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+multi_line_output=3
+include_trailing_comma=true
+
+[tool.autopep8]
+indent_size = 2
+max_line_length = 120
