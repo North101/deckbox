@@ -90,7 +90,7 @@ class DeckboxOuterSide(util.VariantSVGFile[CustomArgs, Side]):
         path(attrs=path.attrs(
             d=path.d([
                 path.d.m(args.outer_thickness, args.outer_thickness + lid_height),
-                path.d.h(width),
+                path.d.h(args.outer_width(False)),
             ]),
         ) | args.cut),
         args.side_magnets(True),
